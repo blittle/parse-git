@@ -1,7 +1,7 @@
 {
   "name": "parse-git",
   "version": "1.0.0",
-  "description": "ERROR: No README.md file found!",
+  "description": "README.md",
   "main": "app.js",
   "scripts": {
     "test": "mocha"
