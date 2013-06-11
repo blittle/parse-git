@@ -1,0 +1,20 @@
+{
+  "name": "parse-git",
+  "version": "1.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "lodash": "latest",
+    "underscore.string": "latest",
+    "mocha": "~1.10.0"
+  },
+  "devDependencies": {
+    "mocha": "latst"
+  },
+  "repository": "https://github.com/blittle/parse-git",
+  "author": "Bret Little",
+  "license": "BSD"
+}
