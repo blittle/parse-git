@@ -9,13 +9,13 @@ Example
 ----------------------
 ```javascript
 
-var parseGit = require('parse-git');
+var ParseGit = require('parse-git');
 var fs = require('fs');
 
 fs.readFile('someFile.txt', 'utf8', function(err, fd) {
     if(err) throw "Cannot load file";
     
-    var commits = GitVis.parseGit(fd), // parseGit returns an array of commits
+    var commits = ParseGit.parseGit(fd), // parseGit returns an array of commits
         commit = commits[0];
     
     console.log(commit.id); // commit id
