@@ -1,6 +1,6 @@
 {
   "name": "parse-git",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "README.md",
   "main": "app.js",
   "scripts": {
@@ -15,5 +15,6 @@
   },
   "repository": "https://github.com/blittle/parse-git",
   "author": "Bret Little",
-  "license": "BSD"
+  "license": "BSD",
+  "bin": "./parse-git"
 }
