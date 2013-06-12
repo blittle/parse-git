@@ -8,11 +8,10 @@
   },
   "dependencies": {
     "lodash": "latest",
-    "underscore.string": "latest",
-    "mocha": "~1.10.0"
+    "underscore.string": "latest"
   },
   "devDependencies": {
-    "mocha": "latst"
+    "mocha": "latest"
   },
   "repository": "https://github.com/blittle/parse-git",
   "author": "Bret Little",
