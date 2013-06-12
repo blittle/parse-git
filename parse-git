@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+var pg = require('./app.js');
+var fs = require('fs');
+
+fs.readFile(process.argv[2], 'utf8', function(err, file) {
+    if(err) throw "Cannot read: " + process.argv[2];
+    console.log(JSON.stringify(pg.parseGit(file))); 
+});
