@@ -32,6 +32,13 @@ fs.readFile('someFile.txt', 'utf8', function(err, fd) {
 
 ```
 
+Command-line
+-----------------------
+Use the tool from the command line by installing the package globally through npm:
+`npm install -g parse-git`
 
+After installing globally, you can use the tool as follows:
+`parse-git someLogOutput.txt`
 
+TODO: Allow piping text directly from git to parse-git: `git log --name-status | parse-git`
 
