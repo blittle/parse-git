@@ -16,6 +16,11 @@ function parseGit( data ) {
            return;
         }
 
+        if(line.substring(0,5) === 'Merge') {
+            //@todo - do something with the merge references
+            return;
+        }
+
         if(line.substring(0,6) === 'Author') {
             commit.author = {
                 name: line.substring(line.indexOf(':')+2, line.indexOf('<')-1),
@@ -30,7 +35,8 @@ function parseGit( data ) {
         }
 
         if(line.substring(0,4) === '    ') {
-            commit.comment = _s.trim(line); 
+            if(!_s.trim(line).length) return;
+            commit.comment = commit.comment ? commit.comment + '\n' + _s.trim(line) : _s.trim(line); 
             return;
         }
         

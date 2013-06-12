@@ -1,12 +1,13 @@
 var assert = require('assert');
 var GitVis = require('./app.js');
 var fs = require('fs');
+var _ = require('lodash');
 
 describe('GitParser', function() {
     var commits;
 
     beforeEach(function(done) {
-        fs.readFile('temp.txt', 'utf8', function(err, fd) {
+        fs.readFile('test.txt', 'utf8', function(err, fd) {
             if(err) throw "Cannot load file";
             commits = GitVis.parseGit(fd);
             done();
@@ -14,7 +15,14 @@ describe('GitParser', function() {
     });
 
     it("Should should parse 12 commits", function() {
+//            _.each(commits, function(commit, i) {_.each(commit.files, function(file) {console.log(file, i)})});
+        console.log(commits[2]);
         assert.equal(34, commits.length);    
+    });
+
+    it("Should parse commits that are merges", function() {
+        assert.equal(0, commits[2].files.length);
+        assert.equal('Merge pull request #10 from mulderp/filename_change\nUpdate file name change bower.json', commits[2].comment);
     });
 
     it("Should parse the name of a commiter", function() {
