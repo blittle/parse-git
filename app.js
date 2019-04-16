@@ -11,6 +11,7 @@ function parseGit( data ) {
     
     _.each(data, function(line) {
         if(line.substring(0,6) === 'commit') {
+           line = _s.trim(line);
            commit = {id: line.substring(7), files: []};
            commits.push(commit);
            return;
