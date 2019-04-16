@@ -1,16 +1,19 @@
-var _ = require('lodash');
 var _s = require('underscore.string');
 
+/**
+ * @param {string} data
+ */
 function parseGit( data ) {
 
     var commits = [];
 
-    data = data.split('\n');
+    const lines = data.split('\n');
 
     var commit;
     
-    _.each(data, function(line) {
+    lines.forEach(function(line) {
         if(line.substring(0,6) === 'commit') {
+           line = _s.trim(line);
            commit = {id: line.substring(7), files: []};
            commits.push(commit);
            return;
