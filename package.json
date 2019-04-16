@@ -7,7 +7,6 @@
     "test": "mocha"
   },
   "dependencies": {
-    "lodash": "latest",
     "underscore.string": "latest"
   },
   "devDependencies": {
